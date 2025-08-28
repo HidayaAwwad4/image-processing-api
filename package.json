@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "build": "rimraf dist && tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch src --exec ts-node src/index.ts",
-    "lint": "eslint 'src/**/*.{ts,tsx}'",
-    "format": "prettier --write .",
-    "jasmine": "jasmine",
-    "test": "npm run build && npm run jasmine"
-  },
+
+"scripts": {
+  "lint": "eslint src --ext .ts",
+  "prettier": "prettier --write src/**/*.ts",
+  "build": "tsc",
+  "start": "node dist/index.js",
+  "dev": "nodemon src/index.ts",
+  "test": "jasmine"
+},
   "keywords": [],
   "author": "",
   "license": "ISC",
